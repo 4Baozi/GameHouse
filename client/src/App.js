@@ -6,54 +6,27 @@ import {
   Link,
   NavLink
 } from 'react-router-dom';
-import PostsListPage from './pages/PostsListPage';
-import PostFormPage from './pages/PostFormPage';
-import ShowPostPage from './pages/ShowPostPage';
-import AboutUsPage from './pages/AboutUsPage';
-
-import './App.css';
+import { PostsListPage, PostFormPage, ShowPostPage, AboutUsPage } from './pages';
+import { Header } from './components';
+import * as ROUTES from './constants/routes'
+import './app.css';
 
 
-function Navigation(props) {
-  return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-      <Link className="navbar-brand" to="/">Micro Blog</Link>
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/posts/new">
-            Create a Micro Post
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/about-us">
-            About Us
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
-  );
-}
-
-
-class App extends React.Component {
-  render() {
+export default function App() {
     return (
         <Router>
-          <Navigation />
+          <Header />
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
-                <Route path="/posts/new" component={PostFormPage} />
-                <Route path="/posts/:id" component={ShowPostPage} />
-                <Route path="/about-us" component={AboutUsPage} />
-                <Route path="/" component={PostsListPage} />
+                <Route path={ROUTES.POSTS_FORM} component={PostFormPage} />
+                <Route path={ROUTES.POST_ID} component={ShowPostPage} />
+                <Route path={ROUTES.ABOUT} component={AboutUsPage} />
+                <Route path={ROUTES.HOME} component={PostsListPage} />
               </Switch>
             </div>
           </div>
         </Router>
     );
-  }
 }
 
-
-export default App;
