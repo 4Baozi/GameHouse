@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Loading() {
+export default function Loading() {
   return (
     <div className="d-flex justify-content-center">
       <div className="spinner-border" role="status">
@@ -9,5 +9,3 @@ function Loading() {
     </div>
   );
 }
-
-export default Loading;
