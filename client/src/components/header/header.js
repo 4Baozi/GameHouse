@@ -6,6 +6,7 @@ import {
     Link,
     NavLink
 } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes'
 
 export default function Header() {
     return (
@@ -13,13 +14,23 @@ export default function Header() {
             <Link className="navbar-brand" to="/">Micro Blog</Link>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <NavLink className="nav-link" exact to="/posts/new">
+                    <NavLink className="nav-link" exact to={ROUTES.POSTS_FORM}>
                         Create a Micro Post
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" exact to="/about-us">
+                    <NavLink className="nav-link" exact to={ROUTES.ABOUT}>
                         About Us
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" exact to={ROUTES.SIGN_IN}>
+                        Sign In
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" exact to={ROUTES.SIGN_UP}>
+                        Sign Up
                     </NavLink>
                 </li>
             </ul>

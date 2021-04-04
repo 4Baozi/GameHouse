@@ -1,0 +1,9 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup label {
+    align-self: flex-start;
+    margin: 5px 0;
+}
