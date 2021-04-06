@@ -3,9 +3,8 @@ import { Room } from '../components'
 
 export default function RoomPage() {
     return (
-        <div>
-            The room
+        <>
             <Room />
-        </div>
+        </>
     )
 }

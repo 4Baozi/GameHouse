@@ -2,7 +2,6 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from "@react-three/drei"
 import { Physics, useBox, usePlane } from "@react-three/cannon"
-
 import * as THREE from "three"
 import './styles/room.css'
 
@@ -24,7 +23,7 @@ function Box() {
             />
             <meshStandardMaterial
                 attach="material"
-                color="hotpink"
+                color="lightgreen"
             />
         </mesh>
     )
@@ -36,7 +35,6 @@ function Plane() {
     }))
 
     return (
-        // ref={ref} position={[0, 0, 0]}
         <mesh
             rotation={[-Math.PI / 2, 0, 0]}>
             <planeBufferGeometry
@@ -52,18 +50,27 @@ function Plane() {
 }
 export default function Room() {
     return (
-        <Canvas className="canvas">
-            <OrbitControls />
-            <Stars />
-            <ambientLight intensity={0.5} />
-            <spotLight
-                position={[10, 15, 10]}
-                angle={0.3}
-            />
-            <Physics>
-                <Box />
-                <Plane />
-            </Physics>
-        </Canvas>
+        <div className="canvas-container">
+
+            <Canvas
+                className="canvas"
+                camera={{
+                    position: [10, 5, 2],
+                }}
+            >
+                <OrbitControls />
+                <Stars />
+                <ambientLight intensity={0.5} />
+                <spotLight
+                    position={[10, 15, 10]}
+                    angle={0.3}
+                />
+                <Physics>
+                    <Box />
+                    <Plane />
+                </Physics>
+            </Canvas>
+        </div>
+
     )
 }
