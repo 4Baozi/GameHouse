@@ -10,6 +10,7 @@ import { PostsListPage, PostFormPage, ShowPostPage, AboutUsPage, SignInPage, Sig
 import { Header } from './components';
 import * as ROUTES from './constants/routes'
 import './app.css';
+import RoomPage from './pages/roomPage';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
                 <Route path={ROUTES.ABOUT} component={AboutUsPage} />
                 <Route path={ROUTES.SIGN_IN} component={SignInPage} />
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+                <Route path={ROUTES.ROOM} component={RoomPage} />
                 <Route path={ROUTES.HOME} component={PostsListPage} />
               </Switch>
             </div>
