@@ -1,7 +1,7 @@
 import React from 'react'
-import { OrbitControls } from "drei"
 import { Canvas } from 'react-three-fiber'
-
+// import { OrbitControls } from "drei"
+import './styles/room.css'
 function Box() {
     return (
         <mesh>
@@ -12,7 +12,8 @@ function Box() {
 }
 export default function Room() {
     return (
-        <Canvas>
+        <Canvas className="canvas">
+            {/* <OrbitControls /> */}
             <Box />
         </Canvas>
     )
