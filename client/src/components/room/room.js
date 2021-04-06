@@ -1,4 +1,5 @@
 import React from 'react'
+import { OrbitControls } from "drei"
 import { Canvas } from 'react-three-fiber'
 
 function Box() {
@@ -11,8 +12,8 @@ function Box() {
 }
 export default function Room() {
     return (
-        <div>
+        <Canvas>
             <Box />
-        </div>
+        </Canvas>
     )
 }

@@ -35,7 +35,7 @@ export default function Header() {
                 </li>
                 <li className="nav-item">
                     <NavLink className="nav-link" exact to={ROUTES.ROOM}>
-                        Sign Up
+                        Room
                     </NavLink>
                 </li>
             </ul>
