@@ -4,30 +4,7 @@ import { OrbitControls, Stars } from "@react-three/drei"
 import { Physics, useBox, usePlane } from "@react-three/cannon"
 import * as THREE from "three"
 import './styles/room.css'
-
-function Box() {
-    const [ref, api] = useBox(() => ({
-        mass: 1,
-        position: [0, 5, 0],
-    }))
-    return (
-        <mesh
-            onClick={() => api.velocity.set(0, 5, 0)}
-            ref={ref}
-            position={[0, 5, 0]}
-            rotation={[0, 1, 0]}
-        >
-            <boxBufferGeometry
-                attach="geometry"
-                args={[1, 2, 2]}
-            />
-            <meshStandardMaterial
-                attach="material"
-                color="lightgreen"
-            />
-        </mesh>
-    )
-}
+import { Text, Box } from '../'
 
 function Plane() {
     const [ref] = usePlane(() => ({
@@ -48,29 +25,29 @@ function Plane() {
         </mesh>
     )
 }
+
 export default function Room() {
     return (
         <div className="canvas-container">
-
-            <Canvas
-                className="canvas"
-                camera={{
-                    position: [10, 5, 2],
-                }}
-            >
-                <OrbitControls />
+            <Canvas camera={{
+                position: [Math.PI * 2, 20, Math.PI * 2],
+            }} >
                 <Stars />
+                <OrbitControls />
                 <ambientLight intensity={0.5} />
                 <spotLight
                     position={[10, 15, 10]}
                     angle={0.3}
                 />
                 <Physics>
-                    <Box />
                     <Plane />
+                    <Box />
+                    <Text text={"Gamehouse"}
+                        position={[0, 10, 0]} />
+                    <Text text={"4 Baozi"}
+                        position={[0, 5, 0]} />
                 </Physics>
             </Canvas>
         </div>
-
     )
 }
