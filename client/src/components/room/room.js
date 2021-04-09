@@ -4,7 +4,7 @@ import { OrbitControls, Stars } from "@react-three/drei"
 import { Physics, useBox, usePlane } from "@react-three/cannon"
 import * as THREE from "three"
 import './styles/room.css'
-import { Text, Box } from '../'
+import { Text, Box, Sphere } from '../'
 
 function Plane() {
     const [ref] = usePlane(() => ({
@@ -20,7 +20,7 @@ function Plane() {
             />
             <meshLambertMaterial
                 attach="material"
-                color="lightblue"
+                color="#B881F3"
             />
         </mesh>
     )
@@ -35,17 +35,33 @@ export default function Room() {
                 <Stars />
                 <OrbitControls />
                 <ambientLight intensity={0.5} />
-                <spotLight
+                {/* <spotLight
                     position={[10, 15, 10]}
                     angle={0.3}
-                />
+                /> */}
+                <pointLight
+                    position={[-10, 10, -10]} castShadow />
+                    {
+                        [-10, 0, 10].map((x) =>
+                            [-10, 0, 10].map((z) =>
+                                <Box position={[x, Math.random() * 5 + 1, z]} />
+                        ))
+                        
+                    }
+                    {
+                        [-20, 5, 20].map((x) =>
+                        [-20, 5, 20].map((z) =>
+                            <Sphere position={[x, Math.random() * 10 + 1, z]} />
+                    ))
+                    }
                 <Physics>
                     <Plane />
                     <Box />
                     <Text text={"Gamehouse"}
-                        position={[0, 10, 0]} />
-                    <Text text={"4 Baozi"}
-                        position={[0, 5, 0]} />
+                        position={[-30, 10, 0]}
+                        color={"#7FFFDD"} />
+                    {/* <Text text={"4 Baozi"} */}
+                        {/* position={[0, 5, 0]} /> */}
                 </Physics>
             </Canvas>
         </div>
