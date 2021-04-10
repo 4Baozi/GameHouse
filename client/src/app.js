@@ -14,6 +14,7 @@ import {
   AboutUsPage,
   SignInPage,
   SignUpPage,
+  ContactPage
 } from "./pages";
 import { Header } from "./components";
 import * as ROUTES from "./constants/routes";
@@ -31,7 +32,8 @@ export default function App() {
             <Route path={ROUTES.ABOUT} component={AboutUsPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-            <Route path={ROUTES.HOME} component={HomePage} />
+            <Route path={ROUTES.CONTACT} component={ContactPage} />
+            <Route path={ROUTES.HOME} component={PostsListPage} />
           </Switch>
         </div>
       </div>

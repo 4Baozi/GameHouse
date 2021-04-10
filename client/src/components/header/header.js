@@ -7,11 +7,13 @@ import {
     NavLink
 } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes'
-
+import Logo from '../../images/gamehouse_logo.svg'
 export default function Header() {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
-            <Link className="navbar-brand" to="/">Micro Blog</Link>
+            <Link className="navbar-brand" to="/"><img src={Logo} /></Link>
+
+{/*             
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <NavLink className="nav-link" exact to={ROUTES.POSTS_FORM}>
@@ -34,6 +36,7 @@ export default function Header() {
                     </NavLink>
                 </li>
             </ul>
+*/}
         </nav>
     )
 }
