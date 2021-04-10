@@ -1,12 +1,13 @@
-import React from 'react';
-import { 
-  BrowserRouter as Router, 
-  Switch, 
-  Route, 
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
   Link,
+
   NavLink
 } from 'react-router-dom';
-import { PostsListPage, PostFormPage, ShowPostPage, AboutUsPage, SignInPage, SignUpPage } from './pages';
+import { PostsListPage,HomePage, PostFormPage, ShowPostPage, AboutUsPage, SignInPage, SignUpPage } from './pages';
 import { Header } from './components';
 import * as ROUTES from './constants/routes'
 import './app.css';
@@ -26,11 +27,10 @@ export default function App() {
                 <Route path={ROUTES.SIGN_IN} component={SignInPage} />
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
                 <Route path={ROUTES.ROOM} component={RoomPage} />
-                <Route path={ROUTES.HOME} component={PostsListPage} />
+                <Route path={ROUTES.HOME} component={HomePage} />
               </Switch>
             </div>
           </div>
         </Router>
     );
 }
-
