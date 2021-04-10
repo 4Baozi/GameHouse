@@ -1,6 +1,6 @@
 export const HOME = '/'
 export const BROWSE = '/gallery'
-export const ROOM = '/room:roomurl'
+export const ROOM = '/room'
 export const ABOUT = '/about-us'
 export const POST_ID = '/posts/:id'
 export const POSTS_FORM = '/posts/new'

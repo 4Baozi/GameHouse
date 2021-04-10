@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-spring/core": "^9.1.0",
+    "@react-spring/three": "^9.1.0",
+    "@react-three/cannon": "^1.0.0",
+    "@react-three/drei": "^4.0.3",
+    "@react-three/fiber": "^6.0.8",
     "firebase": "^8.3.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "4.0.3",
+    "react-three-fiber": "^5.3.22",
+    "three": "^0.127.0"
   },
   "scripts": {
     "start": "react-scripts start",
