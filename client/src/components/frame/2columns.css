@@ -5,5 +5,10 @@
     display: grid; 
     align-items: center; 
     /* auto-fit keyword allows us to wrap our columns into rows when there’s not enough space in our viewport to fit the 240px minimum value without overflowing the content. */
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.main-title{
+    color:#7FFFDD;
+    font-family: Source Code Pro;
 }

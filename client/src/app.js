@@ -23,8 +23,8 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <div className="container-fluid text-center">
-        <div className="row justify-content-center">
+      <div>
+        <div>
           <Switch>
             <Route path={ROUTES.POSTS_FORM} component={PostFormPage} />
             <Route path={ROUTES.POST_ID} component={ShowPostPage} />

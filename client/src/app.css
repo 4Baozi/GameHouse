@@ -27,3 +27,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+p{
+font-family: 'Strait',sans-serif;
+font-weight: regular;
+}
+
+h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+}
