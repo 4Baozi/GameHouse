@@ -9,7 +9,7 @@ function regularColumn(props){
               return(
                 <div className='columns-2' key={key}>           
                     <div>
-                        <h1 className="main-title">{data.title}</h1>
+                        <h1 className="main-title align-center">{data.title}</h1>
                         <p className="caption-title">{data.caption}</p>
                     </div>
                     <div>

@@ -8,7 +8,52 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.main-title{
+h1.main-title{
     color:#7FFFDD;
-    font-family: Source Code Pro;
+    font-size: 40px;
+    width: 80%;
+    text-align: left;
+}
+
+.align-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.caption-title{
+    margin-top: 3%;
+    width: 60%;
+    text-align: left;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+img.column-image{
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media (max-width: 650px) {
+p.caption-title {
+    margin-top: 3%;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+}
+
+h1.main-title {
+    font-size: 30px;
+    width: 80%;
+    text-align: center;
+}
+
+img.column-image {
+    width: 300px;
+
+}
 }
