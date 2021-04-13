@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+/**
+  * Table of Contents
+  *   Global Variables
+  *   Navbar
+  *     Navbar Top
+  *     Navbar Nav
+  *   Toggle
+  *   Media Query
+*/
+/* 
+================
+Global Variables
+================
+*/
+:root {
+  --main-bg-color: #212226;
+  --main-text-color: #7fffdd;
+  --btn-bg-color: #8c69c1;
+  --main-font-family: "Source Code Pro", monospace;
+}
+/*
+================
+Navbar
+================
+*/
+.navbar {
+  background-color: var(--main-bg-color);
+  display: flex;
+}
+
+/*
+================
+Navbar Top
+================
+*/
+.navbar-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 10vh;
+}
+
+/*
+================
+Navbar Nav
+================
+*/
+.navbar-nav {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  display: none;
+}
+
+.navbar-nav :nth-child(2) {
+  margin-top: 20px;
+}
+
+.navbar-item {
+  width: 100%;
+  align-self: center;
+  margin: 0 1em;
+}
+
+.navbar-link {
+  color: var(--main-text-color);
+  display: block;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.navbar-link:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.navbar-button {
+  font-family: var(--main-font-family);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--btn-bg-color);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  white-space: nowrap;
+}
+
+.navbar-button:hover {
+  transition: background-color 0.2s ease;
+  background-color: #73569e;
+}
+
+/*
+================
+Toggle
+================
+*/
+.open-toggle {
+  display: flex;
+}
+
+/*
+================
+Media Query
+================
+*/
+@media screen and (min-width: 1000px) {
+  .navbar-hamburger-icon {
+    display: none;
+  }
+
+  .navbar-top {
+    width: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    width: auto;
+    display: flex !important;
+  }
+
+  .navbar-btn-item {
+    order: 999;
+  }
+
+  .navbar-nav :nth-child(2) {
+    margin-top: 0;
+  }
+}

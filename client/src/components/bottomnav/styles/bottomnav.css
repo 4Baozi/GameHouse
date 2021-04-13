@@ -1,0 +1,52 @@
+:root {
+  --main-bg-color: #212226;
+  --main-text-color: #7fffdd;
+  --btn-bg-color: #8c69c1;
+  --main-font-family: "Source Code Pro", monospace;
+}
+
+.bot-navbar {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+  background-color: var(--main-bg-color);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow-x: auto;
+}
+
+.bot-navbar-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.bot-navbar-item {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.bot-navbar-link {
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%;
+  height: 100%;
+}
+
+.bot-navbar-link:hover {
+  text-decoration: none;
+  color: white;
+  background: rgb(53, 53, 53);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media screen and (min-width: 1000px) {
+  .bot-navbar {
+    display: none;
+  }
+}
