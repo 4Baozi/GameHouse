@@ -17,6 +17,7 @@
     "morgan": "^1.10.0",
     "pg": "^8.4.1",
     "pg-hstore": "^2.3.3",
+    "react-spring": "^9.1.1",
     "sequelize": "^5.22.3",
     "sqlite3": "^4.2.0"
   },

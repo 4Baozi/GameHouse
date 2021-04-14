@@ -11,7 +11,7 @@ import {
   HomePage,
   PostFormPage,
   ShowPostPage,
-  AboutUsPage,
+  GalleryPage,
   SignInPage,
   SignUpPage,
 } from "./pages";
@@ -29,7 +29,7 @@ export default function App() {
           <Switch>
             <Route path={ROUTES.POSTS_FORM} component={PostFormPage} />
             <Route path={ROUTES.POST_ID} component={ShowPostPage} />
-            <Route path={ROUTES.ABOUT} component={AboutUsPage} />
+            <Route path={ROUTES.GALLERY} component={GalleryPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
             <Route path={ROUTES.ROOM} component={RoomPage} />
