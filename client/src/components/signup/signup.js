@@ -3,6 +3,14 @@ import './styles/signup.css'
 import firebase from '../../config/firebase-config'
 import { socialMediaAuth } from '../../service/auth'
 import { googleProvider } from '../../config/authentication-methods'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    NavLink
+} from 'react-router-dom';
+import * as ROUTES from '../../constants/routes'
 
 export default function SignUp() {
     const [email, setEmail] = useState('');
@@ -60,6 +68,10 @@ export default function SignUp() {
                 <button type="submit" disabled={!isValid}>Sign Up</button>
                 <button onClick={() => handleOnClick(googleProvider)}>Google</button>
             </form>
+            
+            <div className="redirect-login">
+                Already have an account? <NavLink className="link" exact to={ROUTES.SIGN_IN}>Sign in</NavLink>
+            </div>
         </>
     )
 }
