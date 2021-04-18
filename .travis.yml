@@ -3,5 +3,5 @@ language:
 before_install:
   - npm install -g codecov
 script:
-  - jest --ci --coverage
+  # - jest --ci --coverage
   - codecov
