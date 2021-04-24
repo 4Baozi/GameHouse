@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+$main-bg-color: #212226;
+$main-text-color: #7fffdd;
+$btn-bg-color: #8c69c1;
+$main-font-family: 'Source Code Pro', monospace;
+
+.navbar {
+    background-color: $main-bg-color;
+    display: flex;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    font-family: $main-font-family;
+    &__top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        margin: 0 4rem;
+        align-items: center;
+        height: 100%;
+        position: sticky;
+    }
+
+    &__logo {
+        height: 100%;
+
+        &__link {
+            height: 100%;
+        }
+    }
+
+    &__hamburger-icon {
+        color: white;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        background-color: $main-bg-color;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-top: 2rem;
+        display: none;
+
+        &__item {
+            width: 100%;
+            list-style: none;
+        }
+
+        &__link {
+            color: $main-text-color;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            text-decoration: none !important;
+            font-size: 1.5rem;
+            width: 100%;
+        }
+
+        &__link:hover {
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: rgb(53, 53, 53);
+            color: white;
+        }
+
+        &__btn {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__button {
+        font-family: $main-font-family;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        background-color: $btn-bg-color;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        white-space: nowrap;
+    }
+
+    &__button:hover {
+        transition: background-color 0.2s ease;
+        background-color: #73569e;
+    }
+
+    .open-toggle {
+        display: flex;
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar {
+        &__hamburger-icon {
+            display: none;
+        }
+        &__top {
+            width: auto;
+        }
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            padding: 0;
+            margin: 0;
+            margin-right: 4rem;
+
+            &__btn {
+                order: 4;
+
+                margin-bottom: 0;
+            }
+
+            &__item {
+                line-height: 1;
+            }
+
+            &__link {
+                font-size: 1rem;
+                padding: 1rem 1rem;
+            }
+        }
+
+        &__button {
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
