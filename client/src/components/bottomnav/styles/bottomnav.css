@@ -1,48 +1,61 @@
-:root {
-  --main-bg-color: #212226;
-  --main-text-color: #7fffdd;
-  --btn-bg-color: #8c69c1;
-  --main-font-family: "Source Code Pro", monospace;
-}
-
 .bot-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   padding: 0;
-  font-family: var(--main-font-family);
-  background-color: var(--main-bg-color);
+  font-family: "Source Code Pro", monospace;
+  background-color: #212226;
   width: 100%;
   position: fixed;
   bottom: 0;
-  overflow-x: auto;
+  height: 64px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.bot-navbar-nav {
+.bot-navbar__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 
-.bot-navbar-item {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.bot-navbar-link {
-  color: var(--main-text-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 3rem;
-  width: 100%;
-  height: 100%;
+.bot-navbar__nav__item {
+  list-style: none;
 }
 
-.bot-navbar-link:hover {
+.bot-navbar__nav__link {
+  color: #7fffdd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2rem 0.5rem;
+}
+
+.bot-navbar__nav__link:hover {
   text-decoration: none;
   color: white;
-  background: rgb(53, 53, 53);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 @media screen and (min-width: 1000px) {
@@ -50,3 +63,4 @@
     display: none;
   }
 }
+/*# sourceMappingURL=bottomnav.css.map */
