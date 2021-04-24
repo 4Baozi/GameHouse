@@ -21,7 +21,6 @@ export default function SignUp() {
     const [error, setError] = useState(''); // for firebase
     const [passwordShown, setPasswordShown] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
-
     const handleOnClick = async (provider) => {
         try {
             const response = await socialMediaAuth(provider);
@@ -43,6 +42,10 @@ export default function SignUp() {
     const handlePasswordToggle = () => {
         setPasswordShown(!passwordShown);
     };
+
+    const handlePasswordToggle = () => {
+        setPasswordShown(!passwordShown);
+    }
 
     const isValid = email !== '' && username !== '' && password !== '';
 
