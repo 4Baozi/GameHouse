@@ -8,6 +8,9 @@
   margin: 0;
   padding: 0;
   font-family: "Source Code Pro", monospace;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar__top {
@@ -24,8 +27,6 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 .navbar__logo {
