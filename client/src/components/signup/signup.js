@@ -44,7 +44,12 @@ export default function SignUp() {
         setPasswordShown(!passwordShown);
     };
 
-    const isValid = email !== '' && username !== '' && password !== '';
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((response) => console.log(response.user))
+      .catch((error) => setError(error.message));
+  };
 
     return (
         <div className='sign-up-container'>
