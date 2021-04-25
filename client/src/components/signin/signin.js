@@ -14,6 +14,7 @@ export default function SignIn() {
     const [error, setError] = useState(''); // for firebase
     const [passwordShown, setPasswordShown] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
+  
     const handleSubmit = (event) => {
         event.preventDefault();
         firebase

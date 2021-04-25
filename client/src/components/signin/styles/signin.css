@@ -1,14 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 .sign-in-container {
+  margin-top: 50px;
   width: 100%;
-  height: 100%;
-  background-color: #212226;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  background-color: #393b41;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  padding-bottom: 10rem;
 }
 
 .title {
   text-align: center;
   color: white;
-  margin: 0;
 }
 
 .form {
@@ -20,11 +38,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   color: #80ffdd;
-  margin: 0;
-}
-
-.form * {
-  margin: 0;
+  margin: 0 2rem;
 }
 
 .form__input, .form__btn {
@@ -194,5 +208,14 @@
 .form__link:hover {
   text-decoration: none;
   color: #3e97a3;
+}
+
+@media screen and (min-width: 1000px) {
+  .sign-in-container {
+    border-radius: 32px;
+    max-width: 1000px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 /*# sourceMappingURL=signin.css.map */
