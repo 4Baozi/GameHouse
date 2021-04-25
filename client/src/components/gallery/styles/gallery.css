@@ -1,0 +1,81 @@
+.gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10vmin;
+  overflow: hidden;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+}
+
+.gallery-container .gallery-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  height: 75vmin;
+  position: relative;
+}
+
+.gallery-container .gallery-card .gallery-card__head {
+  color: black;
+  background: rgba(255, 30, 173, 0.75);
+  padding: 0.5em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.gallery-container .gallery-card:hover {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+.gallery-container .gallery-card:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.gallery-container .gallery-card:hover .gallery-card__head {
+  text-align: center;
+  top: calc(100% - 2em);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+  -webkit-transform: rotate(0deg) skew(-5deg);
+          transform: rotate(0deg) skew(-5deg);
+}
+
+.gallery-container .gallery-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.gallery-container .gallery-card:not(:nth-child(5)) {
+  margin-right: 1em;
+}
+/*# sourceMappingURL=gallery.css.map */
