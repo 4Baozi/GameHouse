@@ -1,4 +1,24 @@
-img{
-    max-width:100%;
+/* .full-background{
+    width:1920px;
+    height: 1800px;
+} */
+/* body{
+    background: url('../../../src/images/signin-background.gif') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+div.hello{
+    height: 2000px;
+} */
+
+/* img{
+    min-height: 100%;
+    height: auto;
+} */
+
+img.full-background{
+    width:100%;
     height: auto;
 }

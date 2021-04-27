@@ -31,6 +31,7 @@
 p{
 font-family: 'Strait',sans-serif;
 font-weight: regular;
+color: white;
 }
 
 h1 {
@@ -38,7 +39,10 @@ h1 {
   font-weight: 700;
 }
 
-img{
-    max-width:100%;
-    height: auto;
+body {
+  background: url('./images/test3.svg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,14 +1,13 @@
 import React from "react";
 import { SignUp } from "../components";
-import { render } from "@react-three/fiber";
 import SigninBackground from "../../src/images/signin-background.gif";
-import "../../src/app.css";
+import "./styles/signUpPage.css";
 
 export default function SignUpPage() {
   return (
-    <div>
+    <div className="hello">
       <img className="full-background" src={SigninBackground}/>
-      {/* <SignUp /> */}
+      <SignUp />
     </div>
   );
 }
