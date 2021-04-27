@@ -7,7 +7,6 @@ export default function SignInPage(props) {
   return (
     <div>
           <img className="full-background" src={SigninBackground}/>
-
       <SignIn />
     </div>
   );

@@ -28,10 +28,10 @@
   box-sizing: border-box;
 }
 
-p{
-font-family: 'Strait',sans-serif;
-font-weight: regular;
-color: white;
+p {
+  font-family: 'Strait',sans-serif;
+  font-weight: regular;
+  color: white;
 }
 
 h1 {
@@ -45,4 +45,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-height: 100%;
+  min-widht: 100%;
 }
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles/signUpPage.css"
-import BK from "../../src/images/signin-background.gif";
+import BK from "../../src/images/loginbackground.gif";
 
 export default function ContactPage() {
     return (
