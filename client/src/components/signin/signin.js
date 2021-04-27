@@ -14,7 +14,7 @@ export default function SignIn() {
     const [error, setError] = useState(''); // for firebase
     const [passwordShown, setPasswordShown] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
-
+  
     const handleSubmit = (event) => {
         event.preventDefault();
         firebase
@@ -46,71 +46,75 @@ export default function SignIn() {
 
     return (
         <div className='sign-in-container'>
-            <h3 className='title'>Sign In</h3>
-            <form className='form' onSubmit={handleSubmit}>
-                <label className='form__lbl' htmlFor='email'>
-                    Email
-                </label>
-                <input
-                    className='form__input'
-                    type='text'
-                    name='email'
-                    id='email'
-                    autoComplete='off'
-                    placeholder='Email address'
-                    onChange={({ target }) => setEmail(target.value)}
-                />
-                <label className='form__lbl' htmlFor='password'>
-                    Password
-                </label>
-                <div className='form__password'>
+            <div className='sign-in__inner'>
+                <h3 className='title'>Sign In</h3>
+                <form className='form' onSubmit={handleSubmit}>
+                    <label className='form__lbl' htmlFor='email'>
+                        Email
+                    </label>
                     <input
                         className='form__input'
-                        type={passwordShown ? 'text' : 'password'}
-                        name='password'
-                        id='password'
+                        type='text'
+                        name='email'
+                        id='email'
                         autoComplete='off'
-                        placeholder='Password'
-                        onChange={({ target }) => setPassword(target.value)}
+                        placeholder='Email address'
+                        onChange={({ target }) => setEmail(target.value)}
                     />
-                    <div
-                        className='password-icon'
-                        tooltip={
-                            passwordShown ? 'Hide password' : 'Show password'
-                        }
-                        onClick={handlePasswordToggle}
-                    >
-                        {passwordShown ? <BiHide /> : <BiShow />}
+                    <label className='form__lbl' htmlFor='password'>
+                        Password
+                    </label>
+                    <div className='form__password'>
+                        <input
+                            className='form__input'
+                            type={passwordShown ? 'text' : 'password'}
+                            name='password'
+                            id='password'
+                            autoComplete='off'
+                            placeholder='Password'
+                            onChange={({ target }) => setPassword(target.value)}
+                        />
+                        <div
+                            className='password-icon'
+                            tooltip={
+                                passwordShown
+                                    ? 'Hide password'
+                                    : 'Show password'
+                            }
+                            onClick={handlePasswordToggle}
+                        >
+                            {passwordShown ? <BiHide /> : <BiShow />}
+                        </div>
                     </div>
-                </div>
 
-                <button
-                    className='form__btn reg'
-                    type='submit'
-                    disabled={!isValid}
-                >
-                    Sign In
-                </button>
-                <button
-                    className='form__btn auth'
-                    onClick={() => handleOnClick(googleProvider)}
-                >
-                    <FcGoogle className='form__icon' /> Sign in with Google
-                </button>
-                <div
-                    className={`form__error ${
-                        errorActive ? 'form__error--active' : ''
-                    }`}
-                >
-                    {error}
-                </div>
-            </form>
+                    <button
+                        className='form__btn reg'
+                        type='submit'
+                        disabled={!isValid}
+                    >
+                        Sign In
+                    </button>
+                    <button
+                        className='form__btn auth'
+                        onClick={() => handleOnClick(googleProvider)}
+                    >
+                        <FcGoogle className='form__icon' /> Sign in with Google
+                    </button>
+                    <div
+                        className={`form__error ${
+                            errorActive ? 'form__error--active' : ''
+                        }`}
+                    >
+                        {error}
+                    </div>
+                </form>
 
-            <div className='form__redirect'>
-                Don't have an account?{' '}
-                <NavLink className='form__link' exact to={ROUTES.SIGN_UP}>
-                    Sign up
-                </NavLink>
+                <div className='form__redirect'>
+                    Don't have an account?{' '}
+                    <NavLink className='form__link' exact to={ROUTES.SIGN_UP}>
+                        Sign up
+                    </NavLink>
+                </div>
             </div>
         </div>
     );

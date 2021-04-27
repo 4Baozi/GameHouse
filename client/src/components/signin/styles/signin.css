@@ -52,6 +52,7 @@
   background-color: #4f4f4f;
   outline: none;
   color: #ffffff;
+  margin: 0;
 }
 
 .form__input::-webkit-input-placeholder {

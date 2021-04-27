@@ -15,6 +15,7 @@ import {
   SignInPage,
   SignUpPage,
   ContactPage,
+  GalleryPage,
 } from "./pages";
 import { Header, BottomNav } from "./components";
 import * as ROUTES from "./constants/routes";
@@ -29,6 +30,7 @@ export default function App() {
         <Route path={ROUTES.POSTS_FORM} component={PostFormPage} />
         <Route path={ROUTES.POST_ID} component={ShowPostPage} />
         {/* <Route path={ROUTES.ABOUT} component={AboutUsPage} /> */}
+        <Route path={ROUTES.BROWSE} component={GalleryPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.ROOM} component={RoomPage} />

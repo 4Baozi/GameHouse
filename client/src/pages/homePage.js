@@ -1,11 +1,16 @@
 import React from "react";
-import Columns from "../components/frame/2columns";
+import { Frame } from "../components";
+import landingData from "../fixtures/landingpage.json";
 
 export default function HomePage() {
   return (
     <div>
-      homepage
-      <Columns />
+      {landingData.map((data, index) => {
+        if (index % 2 === 0)
+          return <Frame key={index} data={data} reverse={true} />;
+
+        return <Frame key={index} data={data} reverse={false} />;
+      })}
     </div>
   );
 }

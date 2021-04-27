@@ -37,3 +37,8 @@ h1 {
   font-family: 'Source Code Pro', monospace;
   font-weight: 700;
 }
+
+img{
+    max-width:100%;
+    height: auto;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 $bg-color-300: hsl(228, 7%, 24%);
 $bg-color-500: hsl(228, 7%, 14%);
@@ -17,174 +17,183 @@ $btn-provider-text-color: hsl(0, 0%, 39%);
 $error-bg-color: hsl(4, 83%, 57%);
 
 .sign-in-container {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-  background-color: $bg-color-300;
-  font-family: $main-font-family;
-  font-size: 1.5rem;
-  margin-top: 2em;
-  padding-bottom: 10rem;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: stretch;
+    // justify-content: center;
+    // margin: 0 auto;
+    // //-- padding: 5rem 2rem;
+    // background-color: $bg-color-300;
+    // font-family: $main-font-family;
+    // font-size: 1.5rem;
+    // //-- margin-top: 2em;
+    // padding-bottom: 10rem;
 }
 
+.sign-in__inner {
+}
 .title {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
+    margin: 0;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  color: $main-text-color;
-  margin: 0 2rem;
-
-  &__input,
-  &__btn {
-    margin: 0.5rem 0;
-    padding: 0.75rem 0.75rem;
-    border-radius: 3px;
-    border: none;
-  }
-  &__input {
-    background-color: $input-bg-color;
-    outline: none;
-    color: #ffffff;
-    &::placeholder {
-      color: $input-placeholder-color;
-    }
-
-    &:focus {
-      border: 3px solid $main-text-color;
-    }
-  }
-
-  &__password {
-    position: relative;
     display: flex;
     flex-direction: column;
-  }
-
-  .password-icon {
-    display: flex;
-    position: absolute;
-    font-size: 2rem;
-    right: 0.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: $bg-color-300;
-    padding: 0.3em;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      background: $bg-color-500;
-    }
-
-    &::after {
-      content: attr(tooltip);
-      position: absolute;
-      color: white;
-      left: 120%;
-      font-size: 1rem;
-      white-space: nowrap;
-      background-color: $bg-color;
-      padding: 0.5rem;
-      border-radius: 3px;
-      border: none;
-      margin-left: 10px;
-      opacity: 0;
-    }
-
-    &:hover::after {
-      opacity: 1;
-      transition: opacity 0.2s ease;
-    }
-  }
-
-  &__lbl {
-    font-weight: bold;
-  }
-
-  button:first-of-type {
-    margin-top: 50px;
-  }
-
-  &__btn {
-    margin: 1rem 0;
-  }
-
-  &__icon {
-    font-size: 2rem;
-    margin-right: 1rem;
-  }
-
-  .reg {
-    background-color: $btn-bg-color;
-    color: white;
-  }
-
-  .reg:disabled {
-    background-color: $btn-disabled-color;
-  }
-
-  .reg:hover:not([disabled]) {
-    background-color: $btn-hover-color;
-  }
-
-  .auth {
-    color: $btn-provider-text-color;
-  }
-
-  .auth:hover {
-    background-color: $btn-provider-color;
-    color: white;
-  }
-
-  &__error {
-    text-align: center;
-    min-height: 5rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  
-  &__error--active {
-    background-color: $error-bg-color;
-  }
-
-  &__redirect {
-    color: white;
-    font-family: $main-font-family;
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  &__link {
     color: $main-text-color;
-  }
+    margin: 0;
 
-  &__link:hover {
-    text-decoration: none;
-    color: $btn-hover-color;
-  }
+    & * {
+        margin: 0;
+    }
+
+    &__input,
+    &__btn {
+        margin: 0.5rem 0;
+        padding: 0.75rem 0.75rem;
+        border-radius: 3px;
+        border: none;
+    }
+    &__input {
+        background-color: $input-bg-color;
+        outline: none;
+        color: #ffffff;
+        margin: 0;
+        &::placeholder {
+            color: $input-placeholder-color;
+        }
+
+        &:focus {
+            border: 3px solid $main-text-color;
+        }
+    }
+
+    &__password {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .password-icon {
+        display: flex;
+        position: absolute;
+        font-size: 2rem;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $bg-color-300;
+        padding: 0.3em;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: $bg-color-500;
+        }
+
+        &::after {
+            content: attr(tooltip);
+            position: absolute;
+            color: white;
+            left: 120%;
+            font-size: 1rem;
+            white-space: nowrap;
+            background-color: $bg-color;
+            padding: 0.5rem;
+            border-radius: 3px;
+            border: none;
+            margin-left: 10px;
+            opacity: 0;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    &__lbl {
+        font-weight: bold;
+    }
+
+    button:first-of-type {
+        margin-top: 50px;
+    }
+
+    &__btn {
+        margin: 1rem 0;
+    }
+
+    &__icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .reg {
+        background-color: $btn-bg-color;
+        color: white;
+    }
+
+    .reg:disabled {
+        background-color: $btn-disabled-color;
+    }
+
+    .reg:hover:not([disabled]) {
+        background-color: $btn-hover-color;
+    }
+
+    .auth {
+        color: $btn-provider-text-color;
+    }
+
+    .auth:hover {
+        background-color: $btn-provider-color;
+        color: white;
+    }
+
+    &__error {
+        text-align: center;
+        min-height: 5rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    &__error--active {
+        background-color: $error-bg-color;
+    }
+
+    &__redirect {
+        color: white;
+        font-family: $main-font-family;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    &__link {
+        color: $main-text-color;
+    }
+
+    &__link:hover {
+        text-decoration: none;
+        color: $btn-hover-color;
+    }
 }
 
-@media screen and (min-width: 1000px) {
-  .sign-in-container {
-    border-radius: 32px;
-    max-width: 1000px;
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-}
+// @media screen and (min-width: 1000px) {
+//     .sign-in-container {
+//         border-radius: 32px;
+//         max-width: 1000px;
+//         padding-left: 10rem;
+//         padding-right: 10rem;
+//     }
+// }
