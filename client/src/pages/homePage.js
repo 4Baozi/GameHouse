@@ -1,7 +1,9 @@
 import React from "react";
 import { Frame } from "../components";
 import landingData from "../fixtures/landingpage.json";
-
+import ReactGlobe from 'react-globe.gl';
+import '../../src/components/globe/styles/globe.css';
+import Globe from '../../src/components/globe/globe.js'
 export default function HomePage() {
   return (
     <div>
@@ -11,6 +13,9 @@ export default function HomePage() {
 
         return <Frame key={index} data={data} reverse={false} />;
       })}
+      <div className="globe">
+          <Globe/>
+      </div>
     </div>
   );
 }
