@@ -1,39 +1,45 @@
 'use strict';
-
 const { Model } = require('sequelize');
-
 module.exports = (sequelize, DataTypes) => {
-    class User extends Model {}
-
+    class User extends Model {
+        /**
+         * Helper method for defining associations.
+         * This method is not a part of Sequelize lifecycle.
+         * The `models/index` file will call this method automatically.
+         */
+        // static associate(models) {
+        //   // define association here
+        // }
+    }
     User.init(
         {
-            username: {
+            firstName: { type: DataTypes.STRING },
+            lastName: { type: DataTypes.STRING },
+            email: {
                 type: DataTypes.STRING,
                 unique: true,
                 allowNull: false,
                 validate: {
-                    isLongEnough: (val) => {
-                        if (val.length < 3)
-                            throw new Error(
-                                'Username requires a minimum of 3 characters'
-                            );
-                    },
-                    notEmpty: true,
+                    isEmail: true,
                 },
             },
+            password: { type: DataTypes.STRING },
         },
         {
             sequelize,
-            modelName: 'user',
+            modelName: 'User',
         }
     );
 
-    User.associate = models = {
-        // associations defined here
+    User.associate = function (models) {
+        // User.hasMany(models.Message);
+        // Message.belongsTo(models.User, {
+        //     // this table belongs to this model
+        //     foreignKey: {
+        //         name: 'userid',
+        //         allowNull: false,
+        //     },
+        // });
     };
-
-    // User.beforeSave((user, options) => {
-    // });
-
     return User;
 };
