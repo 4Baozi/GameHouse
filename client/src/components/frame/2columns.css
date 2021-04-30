@@ -20,7 +20,11 @@ h1.main-title{
     margin-right: auto;
 }
 
+p{
+    color:white;
+}
 p.caption-title{
+    color: #FFFFFF;
     margin-top: 3%;
     width: 60%;
     text-align: left;

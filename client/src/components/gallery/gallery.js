@@ -1,33 +1,23 @@
-import React from 'react';
-import './styles/gallery.css';
-const roomImage1 =
-    'https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/77fc93e7-8947-4cee-8053-9fe6e8f85930_scaled.jpg';
+import React from "react";
+import { galleryData } from "../../fixtures/gallerypage";
 
-export default function Gallery() {
-    return (
-        <div>
-            <div class='gallery-container people-gallery'>
-                <div class='gallery-card'>
-                    <img src={roomImage1} />
-                    <p class='gallery-card__head'>World 1</p>
-                </div>
+import "./styles/gallery.css";
 
-                <div class='gallery-card'>
-                    <img src={roomImage1} />
-                    <p class='gallery-card__head'>World 1</p>
-                </div>
+function Gallery(props) {
+  return (
+    <div>
+      {galleryData.map((data, key) => {
+        return (
+          <div class="gallery-container people-gallery" key={key}>
+            <div class="gallery-card">
+              <img src={data.image} />
+              <p class="gallery-card__head">{data.title}</p>
             </div>
-            <div class='gallery-container people-gallery'>
-                <div class='gallery-card'>
-                    <img src={roomImage1} />
-                    <p class='gallery-card__head'>World 1</p>
-                </div>
-
-                <div class='gallery-card'>
-                    <img src={roomImage1} />
-                    <p class='gallery-card__head'>World 1</p>
-                </div>
-            </div>
-        </div>
-    );
+          </div>
+        );
+      })}
+    </div>
+  );
 }
+
+export default Gallery;

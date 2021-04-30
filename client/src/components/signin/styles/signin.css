@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 .sign-in-container {
   margin-top: 50px;
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,8 +20,6 @@
   background-color: #393b41;
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
-  margin-top: 2em;
-  padding-bottom: 10rem;
 }
 
 .title {
@@ -174,7 +172,7 @@
 
 .form__error {
   text-align: center;
-  min-height: 5rem;
+  min-height: 0rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,9 +183,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 3px;
-  margin: 1rem 0;
-  padding: 1rem;
+  border-radius: 0px;
+  margin: 0rem 0;
+  padding: 0rem;
 }
 
 .form__error--active {
