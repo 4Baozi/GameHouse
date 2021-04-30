@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     let { username, email, password } = req.body;
-    User.create({ username, email, passwordHash })
+    User.create({ username, email, password })
         .then((user) => {
             res.status(201).json(user);
         })
