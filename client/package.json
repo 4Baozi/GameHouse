@@ -19,7 +19,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-three-fiber": "^5.3.22",
-    "three": "^0.127.0"
+    "three": "^0.127.0",
+    "three-fbx-loader": "1.0.3",
+    "three-gltf-loader": "^1.111.0"
   },
   "scripts": {
     "start": "react-scripts start",
