@@ -40,13 +40,12 @@ h1 {
 }
 
 body {
-  /* background-color:black; */
   background: url('./images/test3.svg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
-  min-width: 100%;
+
 }
 

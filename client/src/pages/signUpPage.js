@@ -6,6 +6,7 @@ import "./styles/signUpPage.css";
 export default function SignUpPage() {
   return (
     <div className="hello">
+
       <div className="bring-to-top">
       <SignUp />
       </div>
