@@ -7,10 +7,13 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/kick.glb");
   const { actions } = useAnimations(animations, group);
+
   useEffect(() => {
     console.log(actions);
     actions.Kick.play();
   });
+
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={[0.01, 0.01, 0.01]}>
