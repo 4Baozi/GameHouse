@@ -46,6 +46,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   min-height: 100%;
-
+  min-width: 100%;
 }
 
