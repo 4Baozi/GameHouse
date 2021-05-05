@@ -1,4 +1,3 @@
-#### HackPrinceton Hackathon Submission
 
 <!-- PROJECT LOGO -->
 <br />
