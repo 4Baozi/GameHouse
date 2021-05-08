@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
 import Model from "./resources/Walk.js";
+
 import * as THREE from "three";
 import "./styles/room.css";
 import { Text, Box, Sphere } from "..";
