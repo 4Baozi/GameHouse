@@ -6,8 +6,10 @@ import  "./styles/signUpPage.css";
 export default function SignInPage(props) {
   return (
     <div>
-          <img className="full-background" src={SigninBackground}/>
-      <SignIn />
+      <div className="bring-to-top">
+        <SignIn />
+      </div>
+          <img className="full-background-2" src={SigninBackground}/>
     </div>
   );
 }
