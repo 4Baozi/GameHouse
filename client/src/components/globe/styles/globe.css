@@ -1,7 +1,11 @@
 .globe{
-    /* display:flex;
-    align-items: center; */
-      display: flex;
+  display: flex;
   justify-content: center;
 
+}
+
+@media (max-width: 900px){
+  .globe{
+    display:none;
+  }
 }

@@ -5,7 +5,7 @@ import BK from "../../src/images/loginbackground.gif";
 export default function ContactPage() {
     return (
         <div>
-            <img className="full-background" src={BK}/>
+            <img className="full-background-2" src={BK}/>
         </div>
     )
 }

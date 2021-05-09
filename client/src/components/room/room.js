@@ -49,7 +49,7 @@ export default function Room() {
         <Physics>
           <Plane />
           <Box />
-          <Text text={"Gamehouse"} position={[-30, 10, 0]} color={"#7FFFDD"} />
+          <Text text={"GameHouse"} position={[-30, 10, 0]} color={"#7FFFDD"} />
 
           {/* <Text text={"4 Baozi"} */}
           {/* position={[0, 5, 0]} /> */}
