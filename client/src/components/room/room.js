@@ -50,7 +50,6 @@ export default function Room() {
           <Plane />
           <Box />
           <Text text={"GameHouse"} position={[-30, 10, 0]} color={"#7FFFDD"} />
-
           {/* <Text text={"4 Baozi"} */}
           {/* position={[0, 5, 0]} /> */}
           <Suspense fallback={null}>

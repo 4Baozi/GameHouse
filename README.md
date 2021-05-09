@@ -1,3 +1,129 @@
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a>
+    <img src="" alt="Logo">
+  </a>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributors">Contributors</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+# About The Project ✨♻️
+
+Have you ever had a virtual event where you don’t know if the attendees are engaged? Maybe they’re quiet or shy? Or, are you trying to host a virtual gathering but want to add some spice to your event to engage the audience? Well, we got the solution for you! 👍
+
+GameHouse is a web app that connects people based on their interests in a 3d game environment.
+Our project includes rooms for people to come together and communicate with each other via chat or voice while also interacting with each other virtually!
+Check out our web app and enjoy your hangout! 
+
+# Technical Backbone🖥️🌿
+
+
+
+Some of the completed user stories are:
+
+- Allow multiple users to join the same room.
+- Allow users to communicate through an online chat feature.
+- Allow users to communicate through voice chat.
+
+
+## Screenshots of the web app
+
+
+## Deployed at: https://tetraa.netlify.app
+
+## Built With 💻☀️
+
+- [React](https://reactjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [WebRTC](https://www.javascript.com/)
+- [Socket.io](https://www.javascript.com/)
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+This section will work you through how you can get started with the project.
+
+### Installation
+
+1. You will need NodeJS, Yarn, Web3.js and Truffle.js for this project.
+2. Clone the repo
+   ```sh
+   git clone https://github.com/APiligrim/Tetra.git
+   ```
+3. CD into the project directory
+   ```sh
+   cd Tetra
+   ```
+4. CD into web folder
+   ```sh
+   cd web
+   ```
+5. Install yarn packages
+   ```sh
+   yarn install
+   ```
+6. Start the Server
+   ```sh
+   yarn start
+   ```
+7. For the backend server
+   ```sh
+   cd ../server
+   ```
+8. Install yarn packages
+   ```sh
+   yarn install
+   ```
+9. Start the Server
+   ```sh
+   yarn start
+   ```
+   <!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contributors
+
+1. Josh Improgo - [github](https://github.com/orgs/4Baozi/people/josh-improgo)
+2. Jonas Improgo - [github](https://github.com/orgs/4Baozi/people/josh-improgo)
+3. Anastasiya Uraleva - [github](https://github.com/APiligrim)
+4. Kristy - [github](https://github.com/kl408)
+
+
+<!-- SCREENSHOTS -->
+
+## Screenshots
+
+
+
+
+
+
 # Project Starter
 A starter repo for building CUNY Tech Prep projects with React, Express.js, and Sequelize.js
 
