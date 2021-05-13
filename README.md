@@ -28,7 +28,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-# About The Project ✨♻️
+# About The Project 🎮🌎
 
 Have you ever had a virtual event where you don’t know if the attendees are engaged? Maybe they’re quiet or shy? Or, are you trying to host a virtual gathering but want to add some spice to your event to engage the audience? Well, we got the solution for you! 👍
 
@@ -36,7 +36,7 @@ GameHouse is a web app that connects people based on their interests in a 3d gam
 Our project includes rooms for people to come together and communicate with each other via chat or voice while also interacting with each other virtually!
 Check out our web app and enjoy your hangout! 
 
-# Technical Backbone🖥️🌿
+# Technical Backbone 💻💫
 
 
 
@@ -50,7 +50,7 @@ Some of the completed user stories are:
 ## Screenshots of the web app
 
 
-## Deployed at: https://tetraa.netlify.app
+## Deployed at: WIP
 
 ## Built With 💻☀️
 
