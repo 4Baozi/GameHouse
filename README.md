@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="" alt="Logo">
+    <img src="demo-images/Logo.png" alt="Logo">
   </a>
 
 <!-- TABLE OF CONTENTS -->
