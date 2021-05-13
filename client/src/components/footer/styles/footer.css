@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+.footer {
+    background-color: #212226;
+}
+
+hr {
+    /* border: "5px solid #FFF"; */
+    border: none;
+    height: 1px;
+    margin:auto;
+    width: 75%;
+    background-color: #FFF;
+    margin-bottom: 2%;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__copyright {
+    font-family: 'Strait', sans-serif;
+    color: #FFF;
+    padding-bottom: 1%;
+}
+
+.footer__appLogo {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.footer__teamLogo {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.footer__logoImg {
+    width: 7.5%;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Frame } from "../components";
+import { Frame, Footer } from "../components";
 import landingData from "../fixtures/landingpage.json";
 import "../../src/components/globe/styles/globe.css";
 import Globe from "../../src/components/globe/globe.js";
@@ -26,6 +26,7 @@ export default function HomePage() {
         </div>
       </section>
             <img className="full-background" src={Portal}/>
+            <Footer />
     </div>
   );
 }
