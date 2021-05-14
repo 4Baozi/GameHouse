@@ -39,18 +39,12 @@ export default function SignUp() {
             .then((response) => console.log(response.user))
             .catch((error) => setError(error.message));
     };
-
     const handlePasswordToggle = () => {
         setPasswordShown(!passwordShown);
     };
 
-    firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .then((response) => console.log(response.user))
-        .catch((error) => setError(error.message));
+    const isValid = email !== "" && username !== "" && password !== "";
 
-    const isValid = username !== "" && password !== "" && email !== "";
     return (
         <div className='sign-up-container'>
             <h3 className='title'>Sign Up</h3>

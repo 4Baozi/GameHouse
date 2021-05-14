@@ -2,6 +2,7 @@ export const HOME = "/";
 export const BROWSE = "/gallery";
 export const ROOM = "/room";
 export const ABOUT = "/about-us";
+export const CHARACTER = "/characters";
 export const POST_ID = "/posts/:id";
 export const POSTS_FORM = "/posts/new";
 export const SIGN_UP = "/sign-up";

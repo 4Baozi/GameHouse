@@ -32,12 +32,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   background-color: #393b41;
   font-family: "Source Code Pro", monospace;
-  font-size: 1.5rem;
+  font-size: 20px;
   margin-top: 2em;
-  padding-bottom: 10rem;
+  padding-bottom: 0rem;
 }
 
 .title {
@@ -189,7 +189,7 @@
 
 .form__error {
   text-align: center;
-  min-height: 5rem;
+  min-height: 0rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,9 +200,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 3px;
-  margin: 1rem 0;
-  padding: 1rem;
+  border-radius: 0px;
+  margin: 0rem 0;
+  padding: 0rem;
 }
 
 .form__error--active {
@@ -213,7 +213,7 @@
   color: white;
   font-family: "Source Code Pro", monospace;
   text-align: center;
-  margin-top: 50px;
+  margin-top:-2%;
 }
 
 .form__link {
