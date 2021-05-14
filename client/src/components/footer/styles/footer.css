@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
 .footer {
-    background-color: #212226;
+    /* background-color: #212226; */
+     background-image: linear-gradient(#7956AE,#212226 );
 }
 
 hr {
