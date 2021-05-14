@@ -2,14 +2,14 @@ import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-import { Box } from "../";
+// import { Box } from "../";
 import { PerspectiveCamera } from "@react-three/drei";
 import "./styles/styles.css";
 
-import { OrbitControls, Stars } from "@react-three/drei";
+import { OrbitControls, Stars, Box } from "@react-three/drei";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
 import { MeshPhysicalMaterial } from "three";
-
+import MOCK_UI from "../../images/MOCK_Chat UI Draft - 1.png";
 function Plane() {
     const [ref] = usePlane(() => ({
         rotation: [-Math.PI / 2, 0, 0],
@@ -27,40 +27,40 @@ const Player = ({ position, controls }) => {
     const MOVE_SPEED = 0.05;
     const box = useRef();
     useFrame(() => {
-        // console.log(controls);
-        // if (controls.forward) {
-        //     box.current.position.z -= MOVE_SPEED;
-        //     box.current.rotation.y = Math.PI;
-        // }
+        console.log(controls);
+        if (controls.forward) {
+            box.current.position.z -= MOVE_SPEED;
+            box.current.rotation.y = Math.PI;
+        }
 
-        // if (controls.left) {
-        //     box.current.position.x -= MOVE_SPEED;
-        //     box.current.rotation.y = (3 / 2) * Math.PI;
-        // }
+        if (controls.left) {
+            box.current.position.x -= MOVE_SPEED;
+            box.current.rotation.y = (3 / 2) * Math.PI;
+        }
 
-        // if (controls.back) {
-        //     box.current.position.z += MOVE_SPEED;
-        //     box.current.rotation.y = 0;
-        // }
-        // if (controls.right) {
-        //     box.current.position.x += MOVE_SPEED;
-        //     box.current.rotation.y = Math.PI / 2;
-        // }
-        // if (controls.forward && controls.left) {
-        //     box.current.rotation.y = (5 / 4) * Math.PI;
-        // }
-        // if (controls.forward && controls.right) {
-        //     box.current.rotation.y = (3 / 4) * Math.PI;
-        // }
-        // if (controls.back && controls.left) {
-        //     box.current.rotation.y = (7 / 4) * Math.PI;
-        // }
-        // if (controls.back && controls.right) {
-        //     box.current.rotation.y = Math.PI / 4;
-        // }
+        if (controls.back) {
+            box.current.position.z += MOVE_SPEED;
+            box.current.rotation.y = 0;
+        }
+        if (controls.right) {
+            box.current.position.x += MOVE_SPEED;
+            box.current.rotation.y = Math.PI / 2;
+        }
+        if (controls.forward && controls.left) {
+            box.current.rotation.y = (5 / 4) * Math.PI;
+        }
+        if (controls.forward && controls.right) {
+            box.current.rotation.y = (3 / 4) * Math.PI;
+        }
+        if (controls.back && controls.left) {
+            box.current.rotation.y = (7 / 4) * Math.PI;
+        }
+        if (controls.back && controls.right) {
+            box.current.rotation.y = Math.PI / 4;
+        }
 
-        // if (controls.up) box.current.position.y += MOVE_SPEED;
-        // if (controls.down) box.current.position.y -= MOVE_SPEED;
+        if (controls.up) box.current.position.y += MOVE_SPEED;
+        if (controls.down) box.current.position.y -= MOVE_SPEED;
         if (controls.forward) {
             position = [position[0], position[1], (position[2] -= MOVE_SPEED)];
             console.log(position);
@@ -78,7 +78,7 @@ const Player = ({ position, controls }) => {
 
 export default function App() {
     const [position, setPosition] = useState(
-        /* { x: 0, y: 1.5, z: 20 } */ [0, 1.5, 20]
+        /* { x: 0, y: 1.5, z: 20 } */ [0, 0, 0]
     );
     const [controls, setControls] = useState({
         forward: false,
@@ -172,6 +172,9 @@ export default function App() {
                     {/* <OrbitControls /> */}
                 </Physics>
             </Canvas>
+            <div className='chat'>
+                <img src={MOCK_UI} alt='Mock UI' />
+            </div>
         </div>
     );
 }

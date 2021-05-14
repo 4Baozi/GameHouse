@@ -2,7 +2,7 @@ import React from "react";
 import { galleryData } from "../../fixtures/gallerypage";
 
 import "./styles/gallery.css";
-
+// import "../../images/MOCK_CHAT UI Draft - 1.png"
 function Gallery(props) {
     return (
         <div>

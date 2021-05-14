@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ReactDOM, { Redirect } from "react-dom";
+
 import "./styles/signup.css";
 import firebase from "../../config/firebase-config";
 import { socialMediaAuth } from "../../service/auth";
@@ -21,7 +23,7 @@ export default function SignUp() {
     const [error, setError] = useState(""); // for firebase
     const [passwordShown, setPasswordShown] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
-
+    const [redirectToReferrer, setRedirectToReferrer] = useState(false);
     const handleOnClick = async (provider) => {
         try {
             const response = await socialMediaAuth(provider);
@@ -33,17 +35,27 @@ export default function SignUp() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        firebase
+        /* firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .then((response) => console.log(response.user))
-            .catch((error) => setError(error.message));
+            .catch((error) => setError(error.message)); */
+
+        // START OF MOCK--
+        // /* location.state */ "" ||
+        // const { from } = { from: { pathname: "/" } };
+        setRedirectToReferrer(true);
+        // END OF MOCK --
     };
     const handlePasswordToggle = () => {
         setPasswordShown(!passwordShown);
     };
 
     const isValid = email !== "" && username !== "" && password !== "";
+
+    if (redirectToReferrer) {
+        // return <div>Hello</div>;
+    }
 
     return (
         <div className='sign-up-container'>
@@ -96,12 +108,18 @@ export default function SignUp() {
                         {passwordShown ? <BiHide /> : <BiShow />}
                     </div>
                 </div>
+
                 <button
                     className='form__btn reg'
                     type='submit'
                     disabled={!isValid}
                 >
-                    Sign Up
+                    {/* --------------- MOCK START */}
+                    <NavLink className='form__link' exact to={ROUTES.HOME}>
+                        Sign Up
+                    </NavLink>
+                    {/* ----------- MOCK END */}
+                    {/* Sign Up */}
                 </button>
                 <button
                     className='form__btn auth'
