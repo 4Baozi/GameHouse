@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import './styles/signup.css';
-import firebase from '../../config/firebase-config';
-import { socialMediaAuth } from '../../service/auth';
-import { googleProvider } from '../../config/authentication-methods';
+import React, { useState } from "react";
+import "./styles/signup.css";
+import firebase from "../../config/firebase-config";
+import { socialMediaAuth } from "../../service/auth";
+import { googleProvider } from "../../config/authentication-methods";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link,
     NavLink,
-} from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
-import { FcGoogle } from 'react-icons/fc';
-import { BiShow, BiHide } from 'react-icons/bi';
+} from "react-router-dom";
+import * as ROUTES from "../../constants/routes";
+import { FcGoogle } from "react-icons/fc";
+import { BiShow, BiHide } from "react-icons/bi";
 
 export default function SignUp() {
-    const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(''); // for firebase
+    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState(""); // for firebase
     const [passwordShown, setPasswordShown] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
 
@@ -45,12 +45,12 @@ export default function SignUp() {
     };
 
     firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((response) => console.log(response.user))
-      .catch((error) => setError(error.message));
-  };
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then((response) => console.log(response.user))
+        .catch((error) => setError(error.message));
 
+    const isValid = username !== "" && password !== "" && email !== "";
     return (
         <div className='sign-up-container'>
             <h3 className='title'>Sign Up</h3>
@@ -85,7 +85,7 @@ export default function SignUp() {
                 <div className='form__password'>
                     <input
                         className='form__input'
-                        type={passwordShown ? 'text' : 'password'}
+                        type={passwordShown ? "text" : "password"}
                         name='password'
                         id='password'
                         autoComplete='off'
@@ -95,7 +95,7 @@ export default function SignUp() {
                     <div
                         className='password-icon'
                         tooltip={
-                            passwordShown ? 'Hide password' : 'Show password'
+                            passwordShown ? "Hide password" : "Show password"
                         }
                         onClick={handlePasswordToggle}
                     >
@@ -117,14 +117,14 @@ export default function SignUp() {
                 </button>
                 <div
                     className={`form__error ${
-                        errorActive ? 'form__error--active' : ''
+                        errorActive ? "form__error--active" : ""
                     }`}
                 >
                     {error}
                 </div>
             </form>
             <div className='form__redirect'>
-                Already have an account?{' '}
+                Already have an account?{" "}
                 <NavLink className='form__link' exact to={ROUTES.SIGN_IN}>
                     Sign in
                 </NavLink>
