@@ -4,11 +4,15 @@ import landingData from "../fixtures/landingpage.json";
 import "../../src/components/globe/styles/globe.css";
 import Globe from "../../src/components/globe/globe.js";
 import Portal from "../images/portal.gif";
+import Hero from "../images/hero.gif";
 import "./styles/homePage.css";
 
 export default function HomePage() {
     return (
         <div>
+            <header>
+                <img className='full-background' src={Hero} />
+            </header>
             {landingData.map((data, index) => {
                 if (index % 2 === 0)
                     return <Frame key={index} data={data} reverse={true} />;
