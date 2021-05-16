@@ -34,29 +34,29 @@ export default function Room() {
                     position={[10, 15, 10]}
                     angle={0.3}
                 /> */}
-                <pointLight position={[-10, 10, -10]} castShadow />
-                {[-10, 0, 10].map((x) =>
-                    [-10, 0, 10].map((z) => (
-                        <Box position={[x, Math.random() * 5 + 1, z]} />
-                    ))
-                )}
-                {[-20, 5, 20].map((x) =>
-                    [-20, 5, 20].map((z) => (
-                        <Sphere position={[x, Math.random() * 10 + 1, z]} />
-                    ))
-                )}
-                <Physics>
-                    <Plane />
-                    <Box />
-                    <Text
-                        text={"Gamehouse"}
-                        position={[-30, 10, 0]}
-                        color={"#7FFFDD"}
-                    />
-                    {/* <Text text={"4 Baozi"} */}
-                    {/* position={[0, 5, 0]} /> */}
-                </Physics>
-            </Canvas>
-        </div>
-    );
+        <pointLight position={[-10, 10, -10]} castShadow />
+        {[-10, 0, 10].map((x) =>
+          [-10, 0, 10].map((z) => (
+            <Box position={[x, Math.random() * 5 + 1, z]} />
+          ))
+        )}
+        {[-20, 5, 20].map((x) =>
+          [-20, 5, 20].map((z) => (
+            <Sphere position={[x, Math.random() * 10 + 1, z]} />
+          ))
+        )}
+        <Physics>
+          <Plane />
+          <Box />
+          <Text text={"GameHouse"} position={[-30, 10, 0]} color={"#7FFFDD"} />
+          {/* <Text text={"4 Baozi"} */}
+          {/* position={[0, 5, 0]} /> */}
+          <Suspense fallback={null}>
+            <Model />
+           
+          </Suspense>
+        </Physics>
+      </Canvas>
+    </div>
+  );
 }
