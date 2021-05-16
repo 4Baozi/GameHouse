@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/gallery.css";
 import Wizard from "../../../src/images/wizard.gif";
 import Girl from "../../../src/images/girl.gif";
+
 function CharacterGallery() {
     return (
         <div>
