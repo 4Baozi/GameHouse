@@ -54,6 +54,7 @@ export default function Room() {
           {/* position={[0, 5, 0]} /> */}
           <Suspense fallback={null}>
             <Model />
+           
           </Suspense>
         </Physics>
       </Canvas>
