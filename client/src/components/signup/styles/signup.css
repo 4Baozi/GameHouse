@@ -32,12 +32,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 5rem 2rem;
   background-color: #393b41;
   font-family: "Source Code Pro", monospace;
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-top: 2em;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
 }
 
 .title {
@@ -189,7 +189,7 @@
 
 .form__error {
   text-align: center;
-  min-height: 0rem;
+  min-height: 5rem;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,8 +200,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 0px;
-  margin: 0rem 0;
+  border-radius: 3px;
+  margin: 1rem 0;
   padding: 0rem;
 }
 
@@ -213,7 +213,6 @@
   color: white;
   font-family: "Source Code Pro", monospace;
   text-align: center;
-  margin-top:-2%;
 }
 
 .form__link {
