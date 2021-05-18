@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    NavLink,
 } from "react-router-dom";
 import {
   PostsListPage,
@@ -17,6 +17,7 @@ import {
   ContactPage,
   GalleryPage,
   GalleryCharacterPage,
+  videoCallPage,
 } from "./pages";
 import { Header, BottomNav } from "./components";
 import * as ROUTES from "./constants/routes";
@@ -36,6 +37,7 @@ export default function App() {
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.ROOM} component={RoomPage} />
         <Route path={ROUTES.CONTACT} component={ContactPage} />
+        <Route path={ROUTES.VIDEO} component={videoCallPage} />
         <Route path={ROUTES.HOME} component={HomePage} />
       </Switch>
       <BottomNav />

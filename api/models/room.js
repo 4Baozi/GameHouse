@@ -1,5 +1,5 @@
-'use strict';
-const { Model } = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
     class Room extends Model {}
@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
                 validate: {
                     isLongEnough: (val) => {
                         if (val.length > 250 || val.length < 3) {
-                            throw new Error('Please choose a longer room name');
+                            throw new Error("Please choose a longer room name");
                         }
                     },
                 },
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
                 validate: {
                     isLongEnough: (val) => {
                         if (val.length > 1 || val.length < 50) {
-                            throw new Error('Invalid capacity');
+                            throw new Error("Invalid capacity");
                         }
                     },
                 },
@@ -29,8 +29,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         {
             sequelize,
-            modelName: 'room',
+            modelName: "room",
         }
     );
     return Room;
 };
+
+// Room.associate = (models) => {
+//   //associations
+// };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./App.css";
+
 import io from "socket.io-client";
 import Peer from "simple-peer";
 import styled from "styled-components";
@@ -14,6 +14,7 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   width: 100%;
+  color: white;
 `;
 
 const Video = styled.video`
@@ -22,7 +23,8 @@ const Video = styled.video`
   height: 50%;
 `;
 
-function App() {
+
+function VideoComponent() {
   const [yourID, setYourID] = useState("");
   const [users, setUsers] = useState({});
   const [stream, setStream] = useState();
@@ -157,4 +159,5 @@ function App() {
   );
 }
 
-export default App;
+export default VideoComponent;
+

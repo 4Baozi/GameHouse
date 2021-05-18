@@ -1,37 +1,36 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
-import Model from "./resources/Walk.js";
 import * as THREE from "three";
 import "./styles/room.css";
-import { Text, Box, Sphere } from "..";
+import { Text, Box, Sphere } from "../";
 
 function Plane() {
-  const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 2, 0, 0],
-  }));
+    // const [ref] = usePlane(() => ({
+    //     rotation: [-Math.PI / 2, 0, 0],
+    // }))
 
-  return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]}>
-      <planeBufferGeometry attach="geometry" args={[100, 100]} />
-      <meshLambertMaterial attach="material" color="#B881F3" />
-    </mesh>
-  );
+    return (
+        <mesh rotation={[-Math.PI / 2, 0, 0]}>
+            <planeBufferGeometry attach='geometry' args={[100, 100]} />
+            <meshLambertMaterial attach='material' color='#B881F3' />
+        </mesh>
+    );
 }
 
 export default function Room() {
-  return (
-    <div className="canvas-container">
-      <Canvas
-        camera={{
-          position: [Math.PI * 2, 20, Math.PI * 2],
-        }}
-      >
-        <Stars />
-        <OrbitControls />
-        <ambientLight intensity={0.5} />
-        {/* <spotLight
+    return (
+        <div className='canvas-container'>
+            <Canvas
+                camera={{
+                    position: [Math.PI * 2, 20, Math.PI * 2],
+                }}
+            >
+                <Stars />
+                <OrbitControls />
+                <ambientLight intensity={0.5} />
+                {/* <spotLight
                     position={[10, 15, 10]}
                     angle={0.3}
                 /> */}
@@ -54,6 +53,7 @@ export default function Room() {
           {/* position={[0, 5, 0]} /> */}
           <Suspense fallback={null}>
             <Model />
+           
           </Suspense>
         </Physics>
       </Canvas>

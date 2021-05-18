@@ -1,0 +1,30 @@
+.controls {
+    display: flex;
+    font-size: 2rem;
+    background-color: black;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    /* width: 100vw; */
+}
+.controls label {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: palevioletred;
+    padding: 0.4rem;
+    margin: 0 1rem;
+}
+.controls input {
+    background: none;
+    border: none;
+    font-size: 2rem;
+
+    color: white;
+    margin: 0 1rem;
+    width: 60px;
+}
+
+.controls .chat {
+    height: 100vh;
+}
