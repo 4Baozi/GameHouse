@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 const express = require("express");
-const morgan = require("morgan");
-const path = require("path");
-const db = require("./models");
-const app = express();
-=======
-const express = require('express');
 const http = require("http");
-const path = require('path');
-const morgan = require('morgan');
-const db = require('./models');
->>>>>>> 4ae3ec8e07b0a37142f080860cb12692e701fe7b
+const path = require("path");
+const morgan = require("morgan");
+const db = require("./models");
 const PORT = process.env.PORT;
 const app = express();
 const server = http.createServer(app);
@@ -51,30 +43,63 @@ if (PORT) {
     console.log("===== ERROR ====\nCREATE A .env FILE!\n===== /ERROR ====");
 }
 
-
 const users = {};
+let players = [];
+let positions = [];
 
 io.on("connection", (socket) => {
-  console.log("user connected")
-  if (!users[socket.id]) {
-    users[socket.id] = socket.id;
-  }
-  socket.emit("yourID", socket.id);
-  io.sockets.emit("allUsers", users);
-  socket.on("disconnect", () => {
-    delete users[socket.id];
-  });
+    console.log("User: ", socket.id, "has joined");
+    if (!users[socket.id]) {
+        users[socket.id] = socket.id;
+    }
+    socket.emit("yourID", socket.id);
+    io.sockets.emit("allUsers", users);
 
-  socket.on("callUser", (data) => {
-    io.to(data.userToCall).emit("hey", {
-      signal: data.signalData,
-      from: data.from,
+    socket.on("callUser", (data) => {
+        io.to(data.userToCall).emit("hey", {
+            signal: data.signalData,
+            from: data.from,
+        });
     });
-  });
 
-  socket.on("acceptCall", (data) => {
-    io.to(data.to).emit("callAccepted", data.signal);
-  });
+    socket.on("acceptCall", (data) => {
+        io.to(data.to).emit("callAccepted", data.signal);
+    });
+
+    socket.on("join server", (username) => {
+        const user = {
+            username,
+            id: socket.id,
+            position: [0, 0, 0],
+        };
+        positions.push({
+            username,
+            id: socket.id,
+            position: [0, 0, 0],
+            rotation: [0],
+        });
+        players.push(user);
+        io.emit("new user", players);
+        io.emit("new position", positions);
+    });
+
+    socket.on("new position", (socketUser) => {
+        positions.map((user) => {
+            if (user.id === socketUser.id) {
+                user.position = socketUser.position;
+                user.rotation = socketUser.rotation;
+            }
+        });
+        io.emit("update user", positions);
+    });
+
+    socket.on("disconnect", () => {
+        delete users[socket.id];
+        players = players.filter((user) => user.id !== socket.id);
+        positions = positions.filter((user) => user.id !== socket.id);
+        io.emit("new user", users);
+        io.emit("new position", positions);
+    });
 });
 
 server.listen(8080, () => console.log("server is running on port 8080"));

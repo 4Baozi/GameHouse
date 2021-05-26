@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-
 // import { Box } from "../";
 import { PerspectiveCamera } from "@react-three/drei";
 import "./styles/styles.css";
-
 import { OrbitControls, Stars, Box } from "@react-three/drei";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
 import { MeshPhysicalMaterial } from "three";
 import MOCK_UI from "../../images/MOCK_Chat UI Draft - 1.png";
+import Model from "./resources/Walk.js";
+
 function Plane() {
     const [ref] = usePlane(() => ({
         rotation: [-Math.PI / 2, 0, 0],
@@ -23,7 +23,7 @@ function Plane() {
     );
 }
 
-const Player = ({ position, controls }) => {
+const Player = ({ position, isController, controls }) => {
     const MOVE_SPEED = 0.05;
     const box = useRef();
     useFrame(() => {
@@ -59,14 +59,14 @@ const Player = ({ position, controls }) => {
             box.current.rotation.y = Math.PI / 4;
         }
 
-        if (controls.up) box.current.position.y += MOVE_SPEED;
+        /* if (controls.up) box.current.position.y += MOVE_SPEED;
         if (controls.down) box.current.position.y -= MOVE_SPEED;
         if (controls.forward) {
             position = [position[0], position[1], (position[2] -= MOVE_SPEED)];
             console.log(position);
             // box.position.z -= MOVE_SPEED;
             // box.rotation.y = Math.PI;
-        }
+        } */
     });
     return (
         <>
@@ -169,7 +169,8 @@ export default function App() {
                 <Physics>
                     <Plane />
                     <Player position={position} controls={controls} />
-                    {/* <OrbitControls /> */}
+                    <OrbitControls />
+                    {/* <Model /> */}
                 </Physics>
             </Canvas>
             <div className='chat'>
