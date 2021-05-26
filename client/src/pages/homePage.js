@@ -8,31 +8,33 @@ import Hero from "../images/hero.gif";
 import "./styles/homePage.css";
 
 export default function HomePage() {
-  return (
-    <div>
-      <header>
-        <img className="full-background" src={Hero} />
-      </header>
-      {landingData.map((data, index) => {
-        if (index % 2 === 0)
-          return <Frame key={index} data={data} reverse={true} />;
+    return (
+        <div>
+            <header>
+                <img className='full-background' src={Hero} />
+            </header>
+            {landingData.map((data, index) => {
+                if (index % 2 === 0)
+                    return <Frame key={index} data={data} reverse={true} />;
 
-        return <Frame key={index} data={data} reverse={false} />;
-      })}
-      <div className="globe">
-        <Globe />
-      </div>
+                return <Frame key={index} data={data} reverse={false} />;
+            })}
+            <div className='globe'>
+                <Globe />
+            </div>
 
-      <section>
-        <div className="align-center">
-          <p className=" title-margin-home-page">Ready to get started?</p>
-          <button className="navbar__button center-button">
-            Join Game House
-          </button>
+            <section>
+                <div className='align-center'>
+                    <p className=' title-margin-home-page'>
+                        Ready to get started?
+                    </p>
+                    <button className='navbar__button center-button'>
+                        Join Game House
+                    </button>
+                </div>
+            </section>
+            <img className='full-background' src={Portal} />
+            <Footer />
         </div>
-      </section>
-      <img className="full-background" src={Portal} />
-      <Footer />
-    </div>
-  );
+    );
 }
