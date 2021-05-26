@@ -29,6 +29,7 @@
     "react-spring": "^9.1.1",
     "react-three-fiber": "^6.0.13",
     "sequelize": "^5.22.3",
+    "socket.io": "^4.1.1",
     "sqlite3": "^4.2.0",
     "three-fbx-loader": "^1.0.3",
     "three-gltf-loader": "^1.111.0"

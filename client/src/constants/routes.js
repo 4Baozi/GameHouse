@@ -1,5 +1,6 @@
 export const HOME = "/";
 export const BROWSE = "/gallery";
+export const VIDEO = "/video";
 export const ROOM = "/room";
 export const ABOUT = "/about-us";
 export const CHARACTER = "/characters";
