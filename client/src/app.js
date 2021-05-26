@@ -17,6 +17,7 @@ import {
   ContactPage,
   GalleryPage,
   GalleryCharacterPage,
+  TEMPPAGE
 } from "./pages";
 import { Header, BottomNav } from "./components";
 import * as ROUTES from "./constants/routes";
