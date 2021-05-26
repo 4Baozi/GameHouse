@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.message__username, .message__timestamp {
+    font-size: 12px;
+    color: #fff;
+}
+
+.message__username {
+    margin-left: 5px;
+}
+
+.message__username--self {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.message__timestamp {
+    align-self: flex-end;
+    margin-right: 5px;
+    margin-bottom: 6px;
+}
+
+.message__container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message__container--system {
+    width: 100%;
+    align-items: center;
+}
+
+.message__container--self {
+    display: inline-flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 10px;
+}
+
+.message__text {
+    height: auto;
+    width: auto;
+    font-size: 14px;
+    text-align: left;
+    background-color: #121315;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;      
+    border-radius: 0px 25px 25px 25px;
+    padding: 10px 20px 10px 20px;
+}
+
+.message__text--system {
+    text-align: center;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.message__text--self {
+    height: auto;
+    width: auto;
+    font-size: 14px;
+    background-color: #7FFFDD;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;      
+    border-radius: 25px 0px 25px 25px;
+    padding: 10px 20px 10px 20px;
+}
