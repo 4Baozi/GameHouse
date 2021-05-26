@@ -11,6 +11,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import Model from "./resources/Walk.js";
 import AmoungUs from "./resources/AmoungUs";
 import { handleKeyDown, handleKeyUp } from "./contr";
+import { ChatBox } from "../";
 function Plane() {
     return (
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
@@ -22,8 +23,8 @@ function Plane() {
 
 const Player = ({ position, rotation, isBox }) => {
     const box = useRef();
-    if (isBox) return <Box ref={box} position={position} rotation={rotation} />;
-    return <Model ref={box} position={position} rotation={rotation} />;
+    if (isBox) return <Box position={position} rotation={rotation} />;
+    return <Model position={position} rotation={rotation} />;
 };
 export default function ChatTest() {
     const MOVESPEED = 0.3;
@@ -126,7 +127,10 @@ export default function ChatTest() {
         });
     };
     return (
-        <div>
+        <div
+            className='room__container'
+            style={{ display: "flex", flexDirection: "column" }}
+        >
             <div
                 onKeyUp={(e) => handleKeyUp(e, keys)}
                 onKeyDown={(e) => {
@@ -170,6 +174,7 @@ export default function ChatTest() {
                     </Physics>
                 </Canvas>
             </div>
+            <ChatBox />
         </div>
     );
 }
