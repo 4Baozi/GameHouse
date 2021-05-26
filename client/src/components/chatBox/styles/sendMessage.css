@@ -1,0 +1,34 @@
+.sendMessageForm__container {
+    display: flex;
+    /* justify-content: flex-start; */
+    padding: 5px 5px;
+}
+
+.sendMessageForm__box {
+    height: 40px;
+    width: 90%;
+    font-size: 12px;
+    text-align: left;
+    background-color: #121315;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;      
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+.sendMessageForm__box:focus {
+    outline-width: 1px;
+}
+
+.sendMessageForm__button {
+    height: 40px;
+    width: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #7FFFDD;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;      
+    border: 1px solid black;
+    margin-left: 5px;
+}

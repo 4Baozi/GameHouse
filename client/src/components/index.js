@@ -13,3 +13,4 @@ export { default as BottomNav } from "./bottomnav/bottomnav";
 export { default as Frame } from "./frame/frame";
 export { default as Video } from "./video/video";
 export { default as Controls } from "./controls/controls2";
+export { default as ChatBox } from "./chatBox/chatBox";

@@ -1,0 +1,35 @@
+.app {
+    position: fixed;
+    right: 0;
+}
+
+.chatbox__header {
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #8C69C1;
+    border-left: 2px solid #ADADAD;
+}
+
+.chatbox__box {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    height: 83vh;
+    width: 500px;
+    /* position: fixed; */
+    background-color: #212226;
+    border-left: 2px solid #ADADAD;
+    padding-left: 10px;
+}
+
+.chatbox__sendmessage {
+    height: 50px;
+    width: 500px;
+    line-height: 50px;
+    position: relative;
+    bottom: 0px;
+    background-color: #121315;
+    border-left: 2px solid #ADADAD;
+}
